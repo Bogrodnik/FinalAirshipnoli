@@ -15,32 +15,31 @@
             embedded
             loading-screen="enabled: false;"
             arjs="sourceType: webcam; debugUIEnabled: false;"
+                
         >
             <a-assets>
                 <a-asset-item
                     id="animated-asset"
                     src="assets/asset.glb"
-                ></a-asset-item>
+                    light="defaultLightsEnabled: false"
+                         
+                        
+               ></a-asset-item>
             </a-assets>
             
-            <a-entity light="type: ambient; color: #BBB"></a-entity>
-<a-entity light="type: hemisphere; color: #33C; groundColor: #3C3; intensity: 1000"></a-entity>
 
                 <a-entity
-                          camera.backgroundTexture.encoding = THREE.sRGBEncoding;
-                          renderer.outputEncoding = THREE.sRGBEncoding;
-                          renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-                          renderer.shadowMap.enabled = true;
-                          
+                      light="type: directional; color: #EEE; intensity: 0.5" position="-1 1 0"
+                          light="type: ambient; color: #BBB"
                     look-at="[gps-camera]"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
-                    position="200 0 10" rotation="0 0 0"
+                    position="300 0 10" rotation="90 0 0"
                     scale="0.192140853098432976 0.192140853098432976 0.192140853098432976"
                           renderer="physicallyCorrectLights: true"
      
                     renderer.gammaOutput = true;
-                    renderer.gammaFactor = 1000000;
+                    renderer.gammaFactor = 1.0;
                     gps-entity-place="latitude: 40.21437519262395; longitude: -74.4396458288422;"
                 ></a-entity>
 
