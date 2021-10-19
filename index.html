@@ -22,6 +22,9 @@
                     src="assets/asset.glb"
                 ></a-asset-item>
             </a-assets>
+            
+            <a-entity light="type: ambient; color: #BBB"></a-entity>
+<a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"><
 
                 <a-entity
                           camera.backgroundTexture.encoding = THREE.sRGBEncoding;
@@ -36,7 +39,7 @@
                     scale="0.092140853098432976 0.092140853098432976 0.092140853098432976"
                     renderer="physicallyCorrectLights: true"
                     renderer.gammaOutput = true;
-                    renderer.gammaFactor = 20000.2;
+                    renderer.gammaFactor = 200000.2;
                     gps-entity-place="latitude: 40.21437519262395; longitude: -74.4396458288422;"
                 ></a-entity>
 
